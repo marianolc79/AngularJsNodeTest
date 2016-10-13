@@ -1,0 +1,52 @@
+<html>
+<head>
+<script src="jquery-2.2.0.js"></script>
+
+<script text="javascript">
+
+$( document ).ready(function() {
+	for(var i = 0; i<81; i++) {
+		var divPuzzle = document.createElement("div");
+	
+		$("#game").addChild("<div class=""></div>");
+	}
+	console.log( "ready!" );
+});
+
+/*
+window.onload = function() {
+	var divPuzzle = document.getElementById("game");
+	
+	for(var i = 0; i<81; i++) {
+		var divCell = document.createElement("div");
+		divCell.className = "cell";
+		divPuzzle.appendChild(divCell); 
+	}
+	
+}*/
+
+</script>
+<style>
+#game {
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+}
+
+.cell {
+  display: inline-block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  font-size: 15px;
+}
+</style>
+</head>
+<body>
+  <div id="game">
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+   Define Angular application scope. 
+   All angular tags have to be inside there.
+-->
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS example app</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="js/angular-ui-grid/ui-grid.css"/>
+
+  <!-- jQuery library -->
+  <script src="js/jquery/dist/jquery.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="js/bootstrap/dist/js/bootstrap.js"></script>
+
+</head>
+<body>
+  
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+ <div class="container-fluid">
+   
+   <nav class="navbar navbar-default">
+       <div class="container-fluid">
+         <div class="navbar-header">
+          <a class="navbar-brand" href="#/main">MyApp</a>
+        </div>
+        <ul class="nav navbar-nav"> 
+          <li><a href="#/module1">Module1</a></li> 
+          <li><a href="#/module2">Module2</a></li>           
+          <li class="nav navbar-nav dropdown">
+            <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Drop down menu<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Option1</a></li>
+                  <li><a href="#">Option2</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Something else here</a></li>
+              </ul>
+          </li>
+        </ul>
+        <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Username</a></p>
+       </div> 
+    </nav>
+    <div ng-view></div>
+  </div>
+  </div>
+
+  <!-- Include all angular and other third-party libraries
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="js/angular/angular.js"></script>
+  <script src="js/angular-route/angular-route.js"></script>
+  <script src="js/angular-touch/angular-touch.js"></script>
+  <script src="js/angular-ui-grid/ui-grid.js"></script>
+  <script src="js/underscore/underscore.js"></script>
+    
+  <!-- Include main application, routes and directives -->
+  <script src="app/app.js"></script>
+  <script src="app/app.routes.js"></script>
+  <script src="app/app.directives.js"></script>
+  
+  <!-- Include all controllers and services -->
+  <script src="app/main/mainController.js"></script>
+  <script src="app/main/mainService.js"></script>
+  <script src="app/module1/module1Controller.js"></script>
+  <script src="app/module2/module2Controller.js"></script>
+</body>
+</html>

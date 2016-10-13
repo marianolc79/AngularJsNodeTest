@@ -1,0 +1,26 @@
+{
+  "name": "angulartest",
+  "version": "1.0.0",
+  "description": "Angular + Node test",
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-route": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular-ui-grid": "^3.2.9",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "ui-grid": "0.0.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mariano Lopez",
+  "license": "ISC"
+}

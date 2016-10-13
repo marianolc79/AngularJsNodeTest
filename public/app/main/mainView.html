@@ -1,0 +1,52 @@
+<div> <!-- Don't attach controller in the main view. It makes it to execute twice. -->
+    
+<div class="panel panel-primary">
+
+<div class="panel-heading">Angular js basics</div>
+
+<div>
+    <p>
+        {{message}}
+    </p>
+    <p>
+        <span ng-bind="message1" />
+    </p>
+    <ul>
+        <li ng-repeat="e in list">
+            {{e.name}}
+        </li>
+    </ul>
+</div>
+
+</div>
+
+<div class="panel panel-primary">
+<div class="panel-heading">Form</div>
+<form>
+    <div class="form-group">
+        <label for="textInput">Text input</label>
+        <input type="text" class="form-control" id="textInput" placeholder="Text" ng-model="form.text"/>
+    </div>
+    <div class="form-group">
+        <label for="combo">Combobox input</label>
+        <select ng-options="option.name for option in list track by option.id" ng-model="form.selectedElement" id="combo" convert-to-number  class="form-control" 
+        ng-change="comboChangeFunction()"/>
+    </div>
+    <button class="btn btn-default" ng-click="clickFunction()">Button</button>
+</form>
+</div>
+
+
+<div class="panel panel-primary">
+<div class="panel-heading">Service call</div>
+    <button class="btn btn-default" ng-click="resetServiceResult()">Reset</button>
+    <button class="btn btn-default" ng-click="callService(1)">Click to call service1</button>
+    <button class="btn btn-default" ng-click="callService(2)">Click to call service2</button>
+    <div>
+        <h3>Result:</h3>
+        {{resultCall}}
+    </div>
+</div>
+
+
+</div>
